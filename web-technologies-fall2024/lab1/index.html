@@ -1,14 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/css/styles.css" />
+    <title>Welcome to Lab1 of Web Technologies Fall 2024</title>
 </head>
 
 <body>
 
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <div style="background-color: cadetblue;">
+        <br />
+        <br />
+    </div>
+    <hr />
+
+    <center>
+        <div class="image-container">
+            <img class="image-style" src="static/profile_pic_laxminarayana_vadnala.jpg" alt="Laxminarayana Vadnala">
+        </div>
+        <div>
+            <h1>Laxminarayana Vadnala</h1>
+            <h2>What are my hobbies?</h2>
+            <h3>Bird Watching, Programming Robots, Cooking Indian Food</h3>
+            <h4>Hear out a secret, I recently bought a pet fish, I named it Leo!</h4>
+            <blockquote style="color: darkgreen;">"LIFE - Living Isn't Freaking Easy!!"</blockquote>
+        </div>
+    </center>
+
+    <hr />
+    <!-- <br /> -->
+    <div class="main-information">
+        <h1>Soccer⚽️</h1>
+        <p>More commonly known as football or soccer,[a] is a team sport played between two teams of 11 players each,
+            who primarily use their feet to propel a ball around a rectangular field called a pitch. The objective of
+            the game is to score more goals than the opposing team by moving the ball beyond the goal line into a
+            rectangular-framed goal defended by the opposing team. Traditionally, the game has been played over two
+            45-minute halves, for a total match time of 90 minutes. With an estimated 250 million players active in over
+            200 countries and territories, it is the world's most popular sport.</p>
+
+        <h3>Popular Soccer Players world wide</h3>
+        <ul>
+            <li>Lionel Messi</li>
+            <li>Cristiano Ronaldo</li>
+            <li>Thierry Henry</li>
+            <li>Zinedine Zidane</li>
+            <li>Kylian Mbappé</li>
+        </ul>
+
+        <h3>Top 5 players in Soccer worldwide</h3>
+        <ol>
+            <li>Lionel Messi (Inter Miami)</li>
+            <li>Cristiano Ronaldo (Al Nassr)</li>
+            <li>Kylian Mbappé (Paris Saint-Germain)</li>
+            <li>Erling Haaland (Manchester City)</li>
+            <li>Kevin De Bruyne (Manchester City)</li>
+        </ol>
+
+        <p>For more Top Soccer players list, <a
+                href="https://www.espn.com/soccer/story/_/id/40490059/ranking-top-25-men-soccer-players-21st-century"
+                target="_blank">Click here</a>.</p>
+        <p>Check out details about <a href="https://en.wikipedia.org/wiki/Association_football">Soccer Association</a>!
+        </p>
+
+        <h3>Select Your Favorite Soccer Player:</h3>
+        <select id="itemSelect" onchange="displayPlayerData()">
+            <option value="">--Select an item--</option>
+            <option value="messi">Lionel Messi</option>
+            <option value="ronaldo">Cristiano Ronaldo</option>
+            <option value="henry">Thierry Henry</option>
+            <option value="zidane">Zinedine Zidane</option>
+            <option value="mbappe">Kylian Mbappé</option>
+        </select>
+
+        <p id="dataParagraph"></p>
+
+    </div>
+
+    <hr />
+
+    <center>
+        <h2>My Personal Hobbies</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Hobby</th>
+                <th>Last Activity</th>
+            </tr>
+            <tr>
+                <td>Laxminarayana Vadnala</td>
+                <td>Bird Watching</td>
+                <td>22nd Sept, 2024</td>
+            </tr>
+            <tr>
+                <td>Laxminarayana Vadnala</td>
+                <td>Programming Robots</td>
+                <td>Today</td>
+            </tr>
+            <tr>
+                <td>Laxminarayana Vadnala</td>
+                <td>Cooking Indian Food</td>
+                <td>Today</td>
+            </tr>
+        </table>
+    </center>
+
+    <hr />
+    <div style="background-color: cadetblue;">
+        <br />
+        <br />
+    </div>
+
+
+    <script>
+        const data = {
+            messi: "Lionel Messi is widely regarded as one of the greatest soccer players of all time. Known for his incredible dribbling, vision, and goal-scoring ability, he has won multiple Ballon d'Or awards. His loyalty to FC Barcelona for over two decades has made him a legendary figure in the sport.",
+            ronaldo: "Cristiano Ronaldo is a global icon known for his exceptional athleticism and goal-scoring prowess. He has achieved remarkable success across various leagues, including the Premier League, La Liga, and Serie A. With numerous records to his name, Ronaldo is celebrated for his work ethic and dedication to the game.",
+            henry: "Thierry Henry is regarded as one of the best forwards in soccer history, known for his pace, skill, and finishing ability. He made a significant impact in the English Premier League with Arsenal, where he became the club's all-time leading scorer. Henry also enjoyed a successful international career with France, winning the 1998 World Cup.",
+            zidane: "Zinedine Zidane is a legendary French midfielder known for his elegance, vision, and technical skill on the ball. He played a crucial role in France's victory in the 1998 World Cup and is remembered for his stunning performances in club football with Juventus and Real Madrid. Zidane later transitioned to coaching, achieving remarkable success with Real Madrid.",
+            mbappe: "Kylian Mbappé is one of the brightest young talents in soccer, known for his speed, dribbling, and goal-scoring ability. He burst onto the scene as a teenager with AS Monaco and has since become a key player for Paris Saint-Germain. Mbappé also played a pivotal role in France's 2018 World Cup victory, showcasing his potential on the global stage."
+        };
+
+        function displayPlayerData() {
+            const select = document.getElementById("itemSelect");
+            const selectedValue = select.value;
+            const dataParagraph = document.getElementById("dataParagraph");
+
+            if (selectedValue) {
+                dataParagraph.textContent = data[selectedValue];
+            } else {
+                dataParagraph.textContent = "";
+            }
+        }
+    </script>
 
 </body>
+
 </html>
